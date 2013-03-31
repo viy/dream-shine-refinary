@@ -1,0 +1,10 @@
+!!!
+= render 'refinery/html_tag'
+= render 'refinery/head'
+%body
+  %header#header
+    = render 'layouts/header'
+  %section#page
+    = yield
+  = render '/refinery/javascripts'
+</html>

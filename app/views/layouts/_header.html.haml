@@ -1,0 +1,21 @@
+.header
+  .main-navigation-menu
+    .registration
+      Сайт в разработке.Некоторые функции недоступны.
+    .main-brand-image-div
+      %h1
+        %a{:href => root_url}
+          %img{:src=>image_path("Logo_s.png"), :class => "main-brand-image"}
+    .navigation-menu
+      .navbar
+        .navbar-inner
+          %nav.container
+            %ul.nav
+              - refinery_menu_pages.roots.each do |page|
+                %li{:class => 'active'}
+                  %a{:href=>refinery.url_for(page.url)}
+                    = page.title
+                %li.divider-vertical
+      .shop-nav{:style => "display:none"}
+        <img src="">
+        <span class="items-at-shop">12</span>
