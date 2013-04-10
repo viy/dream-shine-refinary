@@ -12,7 +12,7 @@
           %nav.container
             %ul.nav
               - refinery_menu_pages.roots.each do |page|
-                %li{:class => 'active'}
+                %li{:class => selected_page?(page)? 'active' : ''}
                   %a{:href=>refinery.url_for(page.url)}
                     = page.title
                 %li.divider-vertical
